@@ -1,0 +1,4 @@
+.build/
+Acme-Onelinerer-*.tar.gz
+Acme-Onelinerer-*/
+*.BAK
