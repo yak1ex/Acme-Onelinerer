@@ -29,6 +29,13 @@ EOF
 			++$count;
 		}
 		$_ = '';
+	} elsif(/^\s*show\s*(\d+)$/) {
+		my $idx = $1;
+		print <<EOF;
+[$idx] : $yaml->[$idx]{date}
+	# $yaml->[$idx]{comment}
+	$yaml->[$idx]{source}
+EOF
 	} elsif(/^\s*clear\s*(\d+)$/) {
 		my $idx = $1;
 		splice @$yaml, $idx, 1;
